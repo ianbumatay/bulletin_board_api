@@ -7,5 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Board.create(name: "Traffic") 
+Board.create(name: "Local Traffic")  
+Bulletin.create(board_id: 1, title: "News", content: "flashy report")
 

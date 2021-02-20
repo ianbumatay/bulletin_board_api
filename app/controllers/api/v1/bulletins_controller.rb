@@ -2,7 +2,7 @@ class Api::V1::BulletinsController < ApplicationController
 
      def index 
         bulletins = BUlletin.all 
-        render json:  bulletins
+        render json: bulletins
       end 
   
       def create 

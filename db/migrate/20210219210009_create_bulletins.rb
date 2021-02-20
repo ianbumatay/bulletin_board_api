@@ -3,9 +3,7 @@ class CreateBulletins < ActiveRecord::Migration[6.0]
     create_table :bulletins do |t|
       t.string :title
       t.string :content
-  
-    
-
+      t.integer :board_id
       t.timestamps
     end
   end
