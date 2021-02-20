@@ -28,7 +28,7 @@ class Api::V1::BulletinsController < ApplicationController
       private 
   
       def bulletin_params 
-        params.require(:bulletin).permit(:title, :content)
+        params.require(:bulletin).permit(:title, :content, :board_id)
       end
   
 

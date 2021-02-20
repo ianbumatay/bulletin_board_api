@@ -6,9 +6,12 @@ Rails.application.routes.draw do
 
   namespace :api do  
     namespace :v1 do
-      resources :boards
-      resources :bulletins
-    end 
+
+      resources :boards do
+        resources :bulletins 
+      end
+      
+    end  
   end
 
 
