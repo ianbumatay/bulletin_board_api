@@ -1,7 +1,7 @@
 class Api::V1::BulletinsController < ApplicationController
 
      def index 
-        bulletins = BUlletin.all 
+        bulletins = Bulletin.all 
         render json: bulletins
       end 
   
