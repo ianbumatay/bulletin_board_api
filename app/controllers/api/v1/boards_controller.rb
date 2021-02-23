@@ -6,9 +6,10 @@ class Api::V1::BoardsController <ApplicationController
     end 
 
     def create 
+     # binding.pry
       board = Board.new(board_params)
 
-      if account.save
+      if board.save
         render json: board 
       else 
         render json: {message: 'Board data not found' }
