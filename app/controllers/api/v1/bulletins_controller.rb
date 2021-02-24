@@ -7,10 +7,10 @@ class Api::V1::BulletinsController < ApplicationController
   
       def create 
         #binding.pry
-        bulletin = Bulletin.new(bulletin_params)
+        bulletin = board.bulletins.new(bulletin_params)
   
-        if account.save
-          render json: bulletin
+        if bulletin.save
+          render json: board
         else 
           render json: {message: 'Bulletin data not found' }
         end
