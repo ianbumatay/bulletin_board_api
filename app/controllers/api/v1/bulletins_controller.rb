@@ -6,6 +6,7 @@ class Api::V1::BulletinsController < ApplicationController
       end 
   
       def create 
+        #binding.pry
         bulletin = Bulletin.new(bulletin_params)
   
         if account.save
