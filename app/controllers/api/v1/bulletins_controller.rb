@@ -9,10 +9,10 @@ class Api::V1::BulletinsController < ApplicationController
   
       def create 
         #binding.pry
-        bulletin = board.bulletins.new(bulletin_params)
+        @bulletin = @board.bulletins.new(bulletin_params)
   
-        if bulletin.save
-          render json: board
+        if @bulletin.save
+          render json: @board
         else 
           render json: {message: 'Bulletin data not found' }
         end
@@ -31,7 +31,8 @@ class Api::V1::BulletinsController < ApplicationController
       private 
 
       def set_board 
-        board = Board.find(params[:board_id])
+        @board = Board.find(params[:board_id]) 
+      end
   
       def bulletin_params 
         params.require(:bulletin).permit(:title, :content, :board_id)
