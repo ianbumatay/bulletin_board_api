@@ -1,5 +1,7 @@
 class Api::V1::BulletinsController < ApplicationController
 
+     before_action :set_board
+
      def index 
         bulletins = Bulletin.all 
         render json: bulletins
@@ -22,11 +24,14 @@ class Api::V1::BulletinsController < ApplicationController
       end 
   
       def destroy 
-        bulletin = Board.find(params[:id]) 
+        bulletin = Bulletin.find(params[:id]) 
         bulletin.destroy
       end 
   
       private 
+
+      def set_board 
+        board = Board.find(params[:board_id])
   
       def bulletin_params 
         params.require(:bulletin).permit(:title, :content, :board_id)
