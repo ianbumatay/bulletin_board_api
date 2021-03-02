@@ -1,24 +1,37 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Bulletin Board
+Welcome to my React and Redux Portfolio Project. The Bulletin Board. The concept is to build a digital bulletin board that a user has the ability to create a board and add bulletins (a short official statement) on the board. it can be use by individual person, small business owner, school or by any organisation for urgent and important announcements or a source of ligitimate information within or organisations.
 
-Things you may want to cover:
 
-* Ruby version
+Instillation
+Frontend Repository.
+(https://github.com/ianbumatay/bulletin_board_client)
 
-* System dependencies
+go to github and clone Repository.
 
-* Configuration
+cd bulletin_board_client
 
-* Database creation
+npm start 
 
-* Database initialization
+Backend Repository:
+(https://github.com/ianbumatay/bulletin_board_api)
 
-* How to run the test suite
+go to github
 
-* Services (job queues, cache servers, search engines, etc.)
+and clone the repository.
 
-* Deployment instructions
+cd to bulletin_board_api
 
-* ...
+https://localhost/3000 in your browser.
+
+Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+License
+MIT
+
+Code of conduct
+Everyone interacting in the The Bulletins project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the code of conduct.

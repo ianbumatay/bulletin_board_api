@@ -22,6 +22,7 @@ class Api::V1::BoardsController <ApplicationController
     end 
 
     def destroy 
+      
       board = Board.find(params[:id]) 
       board.destroy
     end 
