@@ -24,8 +24,9 @@ class Api::V1::BulletinsController < ApplicationController
       # end 
   
       def destroy 
+        #binding.pry
         @bulletin = Bulletin.find(params[:id]) 
-        @board = Board.find(bulletin.board_id)
+        @board = Board.find(@bulletin.board_id)
         @bulletin.destroy
         render json: @board
       end 
