@@ -21,7 +21,9 @@ go to github
 
 and clone the repository.
 
-cd to bulletin_board_api
+cd to bulletin_board_api 
+
+run rails s
 
 https://localhost/3000 in your browser.
 

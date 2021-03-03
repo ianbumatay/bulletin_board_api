@@ -18,14 +18,16 @@ class Api::V1::BulletinsController < ApplicationController
         end
       end 
   
-      def show 
-        bulletin = Bulletin.find(params[:id])
-        render json: bulletin
-      end 
+      # def show 
+      #   bulletin = Bulletin.find(params[:id])
+      #   render json: bulletin
+      # end 
   
       def destroy 
-        bulletin = Bulletin.find(params[:id]) 
-        bulletin.destroy
+        @bulletin = Bulletin.find(params[:id]) 
+        @board = Board.find(bulletin.board_id)
+        @bulletin.destroy
+        render json: @board
       end 
   
       private 
